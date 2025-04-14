@@ -1,73 +1,27 @@
 <!DOCTYPE html>
-<html lang="zh">
-<head>
+<html>
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI 策略平台</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-        section {
-            padding: 20px;
-        }
-        .card {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 15px;
-            margin: 10px 0;
-        }
-        h1 {
-            color: #333;
-        }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            border-radius: 5px;
-            text-decoration: none;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>AI 加密货币策略平台</h1>
-    </header>
-    <section>
-        <div class="card">
-            <h2>欢迎来到 AI 策略平台</h2>
-            <p>在这里，你可以获取最新的市场策略、趋势分析和投资建议。</p>
-            <a href="https://www.binance.com" class="button" target="_blank">查看实时市场数据</a>
-        </div>
-        <div class="card">
-            <h2>如何使用</h2>
-            <p>请输入你感兴趣的加密货币，AI 会为你提供建议。</p>
-            <input type="text" placeholder="请输入币种" id="coin-input" />
-            <button class="button" id="get-strategy">获取策略</button>
-            <p id="strategy-result"></p>
-        </div>
-    </section>
+    <title>AI 策略助手</title>
     <script>
-        document.getElementById("get-strategy").addEventListener("click", function() {
-            var coin = document.getElementById("coin-input").value;
-            if (coin) {
-                document.getElementById("strategy-result").innerText = "AI 策略建议：购买 " + coin + "，市场看涨。";
-            } else {
-                document.getElementById("strategy-result").innerText = "请输入有效的币种名称！";
-            }
-        });
+      function getStrategy() {
+        var coin = document.getElementById('coin').value; // 获取输入的币种
+        if (coin.toLowerCase() === "eth") {
+          alert("策略已获取：ETH");
+          // 在这里可以添加实际的策略获取代码
+        } else {
+          alert("请输入有效的币种");
+        }
+      }
     </script>
-</body>
+  </head>
+  <body>
+    <h1>欢迎来到你的 AI 策略网站！</h1>
+    <p>部署成功！后续我们可以集成币圈预测和策略。</p>
+    
+    <label for="coin">输入币种（例如 ETH）：</label>
+    <input type="text" id="coin" placeholder="ETH">
+    
+    <button onclick="getStrategy()">获取策略</button>
+  </body>
 </html>
